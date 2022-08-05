@@ -264,7 +264,13 @@ RUN \
     chmod +x "${HOME}"/firefox.plus/*.sh \
     && gtk-update-icon-cache -f /usr/share/icons/hicolor
 
-
+RUN \
+    sudo apt update && \
+    sudo apt install firefox \
+    python3 \
+    pip 
+    
+    
 #######################
 ### merge_stage_browser
 #######################
